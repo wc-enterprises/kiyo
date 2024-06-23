@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.parent {
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 60px 100px 70px 100px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background: black;
+    align-self: stretch;
+}
+
+.container1 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.container2 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.container3 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.img {
+    border-radius: 50%;
+    height: 200px;
+}
+
+.heart {
+    font-size: 150px;
+    top: 20px;
+    color: #e00;
+    animation: beat .25s infinite alternate;
+    transform-origin: center;
+    text-align: center;
+}
+
+@media (max-width: 426px) {
+    .parent {
+        padding: 15px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .container1 {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+    .container2 {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+    }
+    .container3 {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        align-self: stretch;
+    }
+    .img {
+        border-radius: 50%;
+        height: 200px;
+    }
+    .heart {
+        font-size: 150px;
+        top: 20px;
+        color: #e00;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        text-align: center;
+    }
+}
