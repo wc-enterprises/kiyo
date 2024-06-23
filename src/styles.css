@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: auto;
+}
+body {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}

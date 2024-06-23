@@ -1,0 +1,329 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  height: auto;
+  box-sizing: border-box;
+}
+.main-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 60px 100px 70px 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background: black;
+  align-self: stretch;
+}
+.sub-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+.content-container {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  align-self: stretch;
+  color: #ffffff;
+  font-family: "Mulish", sans-serif;
+  font-size: 30px;
+}
+.content1 {
+  align-self: stretch;
+  font-weight: 600;
+  line-height: 150%;
+}
+.content2 {
+  align-self: stretch;
+  color: #dc5695;
+  font-weight: 900;
+  line-height: 150%;
+}
+.content3 {
+  align-self: stretch;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 150%;
+}
+.content4 {
+  align-self: stretch;
+  color: #bd6bf7;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 150%;
+}
+.sub-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  color: #ffffff;
+  font-family: "Mulish", sans-serif;
+  font-size: 22px;
+}
+.contentsec1 {
+  align-self: stretch;
+  font-weight: 500;
+  line-height: 160%;
+}
+.contentsec2 {
+  align-self: stretch;
+  font-weight: 800;
+  color: #a93ead;
+  line-height: 160%;
+}
+.img-container {
+  width: 475px;
+  height: 655px;
+  background-image: url(/assets/kiyo.png); /* Add your image URL here */
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 15px;
+}
+.img1-container {
+  display: none;
+}
+@media (max-width: 426px) {
+  .main-container {
+    padding: 40px 20px 40px 20px;
+    gap: 40px;
+    overflow-x: scroll;
+    height: auto;
+  }
+  .main-container::-webkit-scrollbar {
+    display: none;
+  }
+  .sub-container {
+    gap: 25px;
+    height: auto;
+  }
+  .content-container {
+    width: 100%;
+    gap: 20px;
+  }
+  .main-content {
+    gap: 0px;
+    font-size: 24px;
+  }
+  .content1 {
+    line-height: 130%;
+  }
+  .content2 {
+    line-height: 130%;
+  }
+  .content3 {
+    font-size: 28px;
+    line-height: 140%;
+  }
+  .content4 {
+    font-size: 28px;
+    line-height: 130%;
+  }
+  .sub-content {
+    gap: 12px;
+    font-size: 16px;
+  }
+  .contentsec1 {
+    line-height: 160%;
+  }
+  .contentsec2 {
+    line-height: 160%;
+  }
+  .img-container {
+    display: none;
+  }
+  .img1-container {
+    width: 100%;
+    height: 325px;
+    border-radius: 15px;
+    display: block;
+    background-image: url(/assets/kiyo.png); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .main-container {
+    padding: 40px 40px 40px 40px;
+    gap: 40px;
+    overflow-x: scroll;
+    height: auto;
+  }
+  .main-container::-webkit-scrollbar {
+    display: none;
+  }
+  .sub-container {
+    gap: 25px;
+    height: auto;
+  }
+  .content-container {
+    width: 100%;
+    gap: 20px;
+  }
+  .main-content {
+    gap: 6px;
+    font-size: 24px;
+  }
+  .content1 {
+    line-height: 130%;
+  }
+  .content2 {
+    line-height: 130%;
+  }
+  .content3 {
+    font-size: 28px;
+    line-height: 140%;
+  }
+  .content4 {
+    font-size: 28px;
+    line-height: 130%;
+  }
+  .sub-content {
+    gap: 12px;
+    font-size: 16px;
+  }
+  .contentsec1 {
+    line-height: 160%;
+  }
+  .contentsec2 {
+    line-height: 160%;
+  }
+  .img-container {
+    display: none;
+  }
+  .img1-container {
+    width: 325px;
+    height: 325px;
+    border-radius: 15px;
+    display: block;
+    background-image: url(/assets/kiyo.png); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .main-container {
+    padding: 60px 40px 60px 40px;
+    gap: 40px;
+  }
+  .sub-container {
+    gap: 25px;
+  }
+  .content-container {
+    width: 60%;
+    gap: 30px;
+  }
+  .main-content {
+    gap: 6px;
+    font-size: 24px;
+  }
+  .content1 {
+    line-height: 130%;
+  }
+  .content2 {
+    line-height: 130%;
+  }
+  .content3 {
+    font-size: 28px;
+    line-height: 140%;
+  }
+  .content4 {
+    font-size: 28px;
+    line-height: 130%;
+  }
+  .sub-content {
+    gap: 12px;
+    font-size: 16px;
+  }
+  .contentsec1 {
+    line-height: 160%;
+  }
+  .contentsec2 {
+    line-height: 160%;
+  }
+  .img-container {
+    width: 325px;
+    height: 500px;
+    border-radius: 15px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1441px) {
+  .main-container {
+    padding: 60px 40px 60px 40px;
+    gap: 40px;
+  }
+  .sub-container {
+    gap: 40px;
+  }
+  .content-container {
+    width: 60%;
+    gap: 30px;
+  }
+  .main-content {
+    gap: 6px;
+    font-size: 26px;
+  }
+  .content1 {
+    line-height: 130%;
+  }
+  .content2 {
+    line-height: 130%;
+  }
+  .content3 {
+    font-size: 30px;
+    line-height: 140%;
+  }
+  .content4 {
+    font-size: 32px;
+    line-height: 130%;
+  }
+  .sub-content {
+    gap: 12px;
+    font-size: 20px;
+  }
+  .contentsec1 {
+    line-height: 160%;
+  }
+  .contentsec2 {
+    line-height: 160%;
+  }
+  .img-container {
+    width: 450px;
+    height: 600px;
+    border-radius: 15px;
+  }
+}
+@media (min-width: 1921px) {
+  .sub-container {
+    width: 80%;
+    align-self:center;
+  }
+}
