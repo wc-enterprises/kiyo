@@ -3,6 +3,7 @@
     padding: 0px;
     height: auto;
     box-sizing: border-box;
+    background: #000000;
 }
 
 .parent {
@@ -33,7 +34,9 @@
     width: 30%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 25px;
     align-items: center;
     align-self: stretch;
 }
@@ -47,13 +50,28 @@
     align-self: stretch;
 }
 
+.header {
+    color: #ffffff;
+    font-family: "Mulish", sans-serif;
+    font-size: 30px;
+    align-self: stretch;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+
 .img {
     border-radius: 50%;
-    height: 200px;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
 }
 
 .heart {
-    font-size: 150px;
+    font-size: 45px;
     top: 20px;
     color: #e00;
     animation: beat .25s infinite alternate;
@@ -61,46 +79,94 @@
     text-align: center;
 }
 
+@keyframes beat {
+    to {
+        transform: scale(1.4);
+    }
+}
+
 @media (max-width: 426px) {
     .parent {
         padding: 15px;
         flex-direction: column;
-        gap: 40px;
+        gap: 75px;
     }
     .container1 {
         width: 100%;
         height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        align-self: stretch;
     }
     .container2 {
-        width: 30%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: stretch;
+        width: 100%;
+        height: fit-content;
+        gap: 7px;
     }
     .container3 {
-        width: 30%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        align-self: stretch;
+        width: 100%;
+        height: fit-content;
     }
     .img {
-        border-radius: 50%;
+        width: 200px;
         height: 200px;
     }
     .heart {
-        font-size: 150px;
+        font-size: 30px;
         top: 20px;
-        color: #e00;
-        animation: beat .25s infinite alternate;
-        transform-origin: center;
-        text-align: center;
+    }
+}
+
+@media (min-width:426px) and (max-width: 769px) {
+    .parent {
+        padding: 15px;
+        flex-direction: column;
+        gap: 75px;
+    }
+    .container1 {
+        width: 100%;
+        height: fit-content;
+    }
+    .container2 {
+        width: 100%;
+        height: fit-content;
+        gap: 7px;
+    }
+    .container3 {
+        width: 100%;
+        height: fit-content;
+    }
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+    .heart {
+        font-size: 30px;
+        top: 20px;
+    }
+}
+
+@media (min-width:769px) and (max-width: 1025px) {
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+    .heart {
+        font-size: 40px;
+        top: 20px;
+    }
+    .container2 {
+        gap: 7px;
+    }
+}
+
+@media (min-width:1025px) and (max-width: 1441px) {
+    .container2 {
+        gap: 7px;
+    }
+    .heart {
+        font-size: 30px;
+        top: 20px;
+    }
+    .img {
+        width: 250px;
+        height: 250px;
     }
 }
