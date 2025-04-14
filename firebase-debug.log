@@ -1,0 +1,43 @@
+[debug] [2025-04-14T21:05:47.801Z] ----------------------------------------------------------------------
+[debug] [2025-04-14T21:05:47.803Z] Command:       /Users/abin/.nvm/versions/node/v20.13.1/bin/node /Users/abin/.nvm/versions/node/v20.13.1/bin/firebase deploy --only hosting
+[debug] [2025-04-14T21:05:47.803Z] CLI Version:   13.29.1
+[debug] [2025-04-14T21:05:47.803Z] Platform:      darwin
+[debug] [2025-04-14T21:05:47.803Z] Node Version:  v20.13.1
+[debug] [2025-04-14T21:05:47.803Z] Time:          Tue Apr 15 2025 02:35:47 GMT+0530 (India Standard Time)
+[debug] [2025-04-14T21:05:47.803Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-14T21:05:47.846Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-14T21:05:47.846Z] > authorizing via signed-in user (abinwc@techcoracorp.com)
+[debug] [2025-04-14T21:05:47.846Z] [iam] checking project in-loving-memory-of-kio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-04-14T21:05:47.847Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:47.847Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:47.848Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/in-loving-memory-of-kio:testIamPermissions [none]
+[debug] [2025-04-14T21:05:47.848Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/in-loving-memory-of-kio:testIamPermissions x-goog-quota-user=projects/in-loving-memory-of-kio
+[debug] [2025-04-14T21:05:47.848Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/in-loving-memory-of-kio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-14T21:05:50.701Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/in-loving-memory-of-kio:testIamPermissions 200
+[debug] [2025-04-14T21:05:50.701Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/in-loving-memory-of-kio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-14T21:05:50.702Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:50.702Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:50.702Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/in-loving-memory-of-kio [none]
+[debug] [2025-04-14T21:05:51.884Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/in-loving-memory-of-kio 200
+[debug] [2025-04-14T21:05:51.885Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/in-loving-memory-of-kio {"projectId":"in-loving-memory-of-kio","projectNumber":"1015539900720","displayName":"in-loving-memory-of-kio","name":"projects/in-loving-memory-of-kio","resources":{"hostingSite":"in-loving-memory-of-kio"},"state":"ACTIVE","etag":"1_ebcf38e2-91c8-4504-8c1c-52cd82228ada"}
+[info] 
+[info] === Deploying to 'in-loving-memory-of-kio'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-04-14T21:05:51.893Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:51.893Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:51.893Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/in-loving-memory-of-kio/versions [none]
+[debug] [2025-04-14T21:05:51.893Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/in-loving-memory-of-kio/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-04-14T21:05:53.699Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/in-loving-memory-of-kio/versions 200
+[debug] [2025-04-14T21:05:53.699Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/in-loving-memory-of-kio/versions {"name":"projects/1015539900720/sites/in-loving-memory-of-kio/versions/3c5fc045005c80cf","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[in-loving-memory-of-kio]: beginning deploy... 
+[info] i  hosting[in-loving-memory-of-kio]: found 14 files in dist/kiyo/browser 
+[debug] [2025-04-14T21:05:53.714Z] [hosting] uploading with 200 concurrency
+[debug] [2025-04-14T21:05:53.715Z] [hosting] hash cache [ZGlzdC9raXlvL2Jyb3dzZXI] not populated
+[debug] [2025-04-14T21:05:53.772Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:53.773Z] Checked if tokens are valid: true, expires at: 1744668311208
+[debug] [2025-04-14T21:05:53.773Z] [hosting] hash cache [ZGlzdC9raXlvL2Jyb3dzZXI] stored for 14 files
+[debug] [2025-04-14T21:05:53.774Z] [hosting][hash queue][FINAL] {"max":55,"min":8,"avg":13.642857142857142,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":58}
+[debug] [2025-04-14T21:05:53.774Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1015539900720/sites/in-loving-memory-of-kio/versions/3c5fc045005c80cf:populateFiles [none]
+[debug] [2025-04-14T21:05:53.774Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1015539900720/sites/in-loving-memory-of-kio/versions/3c5fc045005c80cf:populateFiles {"files":{"/styles-GMDSSQC6.css":"ce9cd966089d5182d0c8e03d08cb42e0b160d21fbb8041f50a2b583e548c8e81","/assets/line.svg":"308e52f59fa7702aecd73924602ca4aa8a93a26339c8c5cdafed5077452e4cb7","/index.html":"19d49e2be7bb959411ca994c7186a527fd9334667e8294a04802cdab728c2e29","/polyfills-6EAL64PA.js":"6a167443270dead749b75ec70255f01679c8d3278a1e9e5bc41db568a1c5f5b4","/404.html":"b6abfbdc894d37c260154e281499dc6415bb6ad76b32f01ef94dee93aa897ac4","/favicon.ico":"8f1fc0f94ae643bb8757c3cb49f69bf6cb2228f632cb77c7e47d8ee3995d88a7","/assets/kio.jpg":"825912a19bb0d79c404398432aa958be1d0c3e30697fea0e7da0d5ccae80762b","/assets/kio-crop.jpg":"1ac467e180029e1b8b713357d9577a60b8672f997487de9ccf7cbb7f2bc3c165","/assets/hasinn.jpg":"5bf2b45ea1aa35941b95f29a0fd6f9df4077d51532dda8903e04a675017abbd1","/main-LOEXP4PY.js":"eebd4ff90ebf3c42a17000d1d3c92ba7e4e7347555066cf6153096e03317b080","/assets/hasin4.jpg":"cf5f5d268842133aeff66fe95030fd2fa69698de9e556f27a747fd72744abf50","/assets/hasin.jpg":"2e6aa611c8981fd9ed388a5e1dd034ef0dc0005d70f768e29543093a7653ee27","/assets/hasinnn.jpg":"ab2a036f64f0463d3eb9adc0a63bef1649c724fd4ecc2dd5fd427a76b1035a39","/assets/kiyo.png":"5c9cb13c0009a643a8bddeb88187c66e1e8620d2f3adcadfa94fba9c876c7af0"}}

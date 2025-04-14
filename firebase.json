@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/kiyo/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
