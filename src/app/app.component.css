@@ -1,172 +1,203 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    height: auto;
-    box-sizing: border-box;
-    background: #000000;
+  margin: 0px;
+  padding: 0px;
+  height: auto;
+  box-sizing: border-box;
+  background: #000000;
 }
 
 .parent {
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-    box-sizing: border-box;
-    display: flex;
-    padding: 60px 100px 70px 100px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    background: black;
-    align-self: stretch;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  min-height: 400px;
 }
 
-.container1 {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
-.container2 {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 25px;
-    align-items: center;
-    align-self: stretch;
-}
-
-.container3 {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    align-self: stretch;
-}
-
-.header {
-    color: #ffffff;
-    font-family: "Mulish", sans-serif;
-    font-size: 30px;
-    align-self: stretch;
-    display: flex;
-    font-weight: 700;
-    justify-content: center;
-    align-items: center;
-}
+/* Remove old containers and header styles */
 
 .img {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
+  position: absolute;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  box-shadow: 0 6px 32px 0 #1118;
+  transition: width 0.2s, height 0.2s;
+}
+.img-top-left {
+  top: 40px;
+  left: 40px;
+  width: 320px;
+  height: 320px;
+  z-index: 2;
+}
+.img-bottom-right {
+  bottom: 40px;
+  right: 40px;
+  width: 320px;
+  height: 320px;
+  z-index: 2;
 }
 
 .heart {
-    font-size: 45px;
-    top: 20px;
-    color: #e00;
-    animation: beat .25s infinite alternate;
-    transform-origin: center;
-    text-align: center;
+  color: #e00;
+  animation: beat 1s infinite alternate;
+  transform-origin: center;
+  text-align: center;
+  font-size: 80px;
+  background: none;
+  filter: none;
+  box-shadow: none;
+}
+.heart-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  pointer-events: none;
 }
 
 @keyframes beat {
-    to {
-        transform: scale(1.4);
-    }
+  to {
+    transform: scale(1.1);
+  }
 }
 
-@media (max-width: 426px) {
-    .parent {
-        padding: 15px;
-        flex-direction: column;
-        gap: 75px;
-    }
-    .container1 {
-        width: 100%;
-        height: fit-content;
-    }
-    .container2 {
-        width: 100%;
-        height: fit-content;
-        gap: 7px;
-    }
-    .container3 {
-        width: 100%;
-        height: fit-content;
-    }
-    .img {
-        width: 200px;
-        height: 200px;
-    }
-    .heart {
-        font-size: 30px;
-        top: 20px;
-    }
+/* Diagonal dotted line styles */
+.diagonal-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  /* Make sure line is always below images and heart */
 }
 
-@media (min-width:426px) and (max-width: 769px) {
-    .parent {
-        padding: 15px;
-        flex-direction: column;
-        gap: 75px;
-    }
-    .container1 {
-        width: 100%;
-        height: fit-content;
-    }
-    .container2 {
-        width: 100%;
-        height: fit-content;
-        gap: 7px;
-    }
-    .container3 {
-        width: 100%;
-        height: fit-content;
-    }
-    .img {
-        width: 200px;
-        height: 200px;
-    }
-    .heart {
-        font-size: 30px;
-        top: 20px;
-    }
+/* Animate the dots along the line using SVG animateMotion (already in HTML) */
+
+@media (max-width: 600px) {
+  .img-top-left {
+    width: 160px;
+    height: 160px;
+    top: 10px;
+    left: 10px;
+  }
+  .img-bottom-right {
+    width: 160px;
+    height: 160px;
+    bottom: 10px;
+    right: 10px;
+  }
+  .heart {
+    font-size: 48px;
+  }
+  .diagonal-line {
+    width: 100vw;
+    height: 100vw;
+  }
 }
 
-@media (min-width:769px) and (max-width: 1025px) {
-    .img {
-        width: 200px;
-        height: 200px;
-    }
-    .heart {
-        font-size: 40px;
-        top: 20px;
-    }
-    .container2 {
-        gap: 7px;
-    }
+@media (min-width: 601px) and (max-width: 1025px) {
+  .img-top-left {
+    width: 220px;
+    height: 220px;
+    top: 25px;
+    left: 25px;
+  }
+  .img-bottom-right {
+    width: 220px;
+    height: 220px;
+    bottom: 25px;
+    right: 25px;
+  }
+  .heart {
+    font-size: 60px;
+  }
+  .diagonal-line {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
-@media (min-width:1025px) and (max-width: 1441px) {
-    .container2 {
-        gap: 7px;
-    }
-    .heart {
-        font-size: 30px;
-        top: 20px;
-    }
-    .img {
-        width: 250px;
-        height: 250px;
-    }
+@media (min-width: 1026px) {
+  .img-top-left {
+    width: 320px;
+    height: 320px;
+    top: 40px;
+    left: 40px;
+  }
+  .img-bottom-right {
+    width: 320px;
+    height: 320px;
+    bottom: 40px;
+    right: 40px;
+  }
+  .heart {
+    font-size: 80px;
+  }
+  .diagonal-line {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+  .parent {
+    padding: 15px;
+    flex-direction: column;
+    gap: 75px;
+  }
+  .container1 {
+    width: 100%;
+    height: fit-content;
+  }
+  .container2 {
+    width: 100%;
+    height: fit-content;
+    gap: 7px;
+  }
+  .container3 {
+    width: 100%;
+    height: fit-content;
+  }
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+  .heart {
+    font-size: 30px;
+    top: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+  .heart {
+    font-size: 40px;
+    top: 20px;
+  }
+  .container2 {
+    gap: 7px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1441px) {
+  .container2 {
+    gap: 7px;
+  }
+  .heart {
+    font-size: 30px;
+    top: 20px;
+  }
+  .img {
+    width: 250px;
+    height: 250px;
+  }
 }

@@ -1,20 +1,16 @@
 <div class="parent">
-    <div class="container1">
-        <img class="img" src="assets/kio-crop.jpg" alt="Avatar" />
-    </div>
-    <div class="container2">
-        <span class="header">
-      <span style="color: #dc5695">KIO</span> &nbsp;&nbsp;
-        <span class="heart">&#x2665;</span> &nbsp;&nbsp;
-        <span style="color: #bd6bf7">HASIN</span></span>
-    </div>
+  <!-- First image: Top Left -->
+  <img #img1 class="img img-top-left" src="assets/kio-crop.jpg" alt="Avatar 1" />
 
-    <!-- <div>
-        <p class="header" style="color: red; font-weight: bold">HASIN</p>
-        <p class="header">I will always be in your memory</p>
-    </div> -->
-    <div class="container3">
-        <img class="img" src="assets/hasin4.jpg" alt="Avatar" />
-    </div>
+  <!-- Second image: Bottom Right -->
+  <img #img2 class="img img-bottom-right" src="assets/hasin4.jpg" alt="Avatar 2" />
+
+  <!-- SVG dotted diagonal line (touches image edges) -->
+  <svg class="diagonal-line" width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+    <line x1="180" y1="180" x2="820" y2="820" stroke="#b38cf7bb" stroke-width="2" stroke-dasharray="10,14" />
+  </svg>
+
+  <!-- Heart at center of diagonal -->
+  <span #heart class="heart heart-center">&#x2665;</span>
 </div>
 <app-main></app-main>
