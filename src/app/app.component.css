@@ -70,11 +70,12 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   pointer-events: none;
   z-index: 1;
-  /* Make sure line is always below images and heart */
+  /* The actual line will be drawn by JavaScript */
+  overflow: visible;
 }
 
 /* Animate the dots along the line using SVG animateMotion (already in HTML) */
